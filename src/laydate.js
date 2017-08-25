@@ -1703,6 +1703,8 @@
       
       //选择年月
       lay(header[2]).find('span').on('click', function(e){
+        // type=time 跳过
+        if(that.config.type == 'time') return !1;
         var othis = lay(this)
         ,layYM = othis.attr('lay-ym').split('-')
         ,layType = othis.attr('lay-type');
